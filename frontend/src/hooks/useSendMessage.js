@@ -19,7 +19,7 @@ const useSendMessage = () => {
 			const data = await res.json();
 			if (data.error) throw new Error(data.error);
 
-			setMessages([...messages, data]);
+			setMessages([...messages, data]); //Will update the messages in the conversation while having previous messages
 		} catch (error) {
 			toast.error(error.message);
 		} finally {
